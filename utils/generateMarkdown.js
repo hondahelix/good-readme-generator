@@ -1,10 +1,10 @@
-function generateMarkdown(data) {
+function generateMarkdown(userResponse,userGitHubInfo) {
      var readMeOutline = `
-   # ${data.title}
+   # ${userResponse.title}
 
    ## Description 
 
-   ${data.description}
+   ${userResponse.description}
 
    ## Table of Contents
    * [Installation](#installation)
@@ -14,38 +14,41 @@ function generateMarkdown(data) {
    
    ## Installation
 
-   ${data.installation}
+   ${userResponse.installation}
 
    ## Usage 
 
-   ${data.usage}
+   ${userResponse.usage}
 
    ## Credits
 
-   ${data.credits}
+   ${userResponse.credits}
 
    ## License
 
-   ${data.license}
+   ${userResponse.license}
 
    ## Badges
 
-   ![badmath](https://img.shields.io/github/issues/${data.gitHubUsername}/${data.title})
-   ![badmath](https://img.shields.io/github/forks/${data.gitHubUsername}/${data.title})
-   ![badmath](https://img.shields.io/github/stars/${data.gitHubUsername}/${data.title})
-   ![badmath](https://img.shields.io/github/license/${data.gitHubUsername}/${data.title})
+   ![badmath](https://img.shields.io/github/issues/${userResponse.gitHubUsername}/${userResponse.title})
+   ![badmath](https://img.shields.io/github/forks/${userResponse.gitHubUsername}/${userResponse.title})
+   ![badmath](https://img.shields.io/github/stars/${userResponse.gitHubUsername}/${userResponse.title})
+   ![badmath](https://img.shields.io/github/license/${userResponse.gitHubUsername}/${userResponse.title})
 
    ## Contributing
 
-   ${data.contributing}
+   ${userResponse.contributing}
 
    ## Tests
 
-   ${data.tests}
+   ${userResponse.tests}
 
    ## Questions
 
-   ${data.questions}
+   ${userResponse.questions}
+
+   ${userGitHubInfo.data.email}
+   ![userAvatar](${userGitHubInfo.data.avatar_url})
 
    `;
 

@@ -1,10 +1,11 @@
-const inquirer = require("inquirer");
+//requred 
 const fs = require("fs");
+const inquirer = require("inquirer");
+const axios = require("axios");
 const util = require("util");
 let generateMarkdown = require('./utils/generateMarkdown.js');
 const writeFileAsync = util.promisify(fs.writeFile);
-//console.log(generateMarkdown());
-
+//questions construct
 function Questions(userPrompt,userInput){
     this.type = "input",
     this.message = userPrompt,
@@ -16,31 +17,25 @@ const questions = ["What is your Github username?","What is your projects title?
                   ];
 const input = ["gitHubUsername", "title","description", "installation", "usage", "credits", "license", "contributing","tests" ,"questions"]
 const prompt = [];
+//makes and puts question objects into a array
 for(i=0; i<questions.length; i++){
     prompt.push(new Questions(questions[i],input[i]));
 }
-//console.log(prompt);
-
+//prompts user and also gets github info provided that they type in a valid github username
 async function promptUser(){
     try{
         const response = await inquirer.prompt(prompt);
-        console.log(response);
-        const filledFile = await generateMarkdown(response);
-        console.log(filledFile);
+        const userGithubInfo = await axios.get(`https://api.github.com/users/${response.gitHubUsername}`);
+        const filledFile = generateMarkdown(response,userGithubInfo);
         writeToFile("test.md",filledFile);
     }
     catch (err){
         console.log(err);
     }
 }
-
+//writes files 
 function writeToFile(fileName, data) {
     writeFileAsync(fileName,data);
 }
 
 promptUser();
-// function init() {
-
-// }
-
-// init();
