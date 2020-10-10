@@ -26,6 +26,12 @@ Then you will be prompted with some questions in order to fill out the read me.
 ## Usage 
 
 The usage of this project is to enable the user to be able to generate a good readme with a simple line of code which then enables the user to fill out information about their projects.
+
+                        Code in index.js
+![Highscore page](pictures/code-index.PNG)
+
+                        Code in generateMarkdown.js
+![Problem child](pictures/generate-markdown-code.PNG)
    
 ## Credits
 
