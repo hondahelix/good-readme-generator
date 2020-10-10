@@ -48,6 +48,7 @@ function generateMarkdown(userResponse,userGitHubInfo) {
    ${userResponse.questions}
 
    ${userGitHubInfo.data.email}
+   
    ![userAvatar](${userGitHubInfo.data.avatar_url})
 
    `;

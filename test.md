@@ -1,9 +1,9 @@
 
-   # hi
+   # good-readme-generator
 
    ## Description 
 
-   test
+   makes a read me
 
    ## Table of Contents
    * [Installation](#installation)
@@ -13,38 +13,38 @@
    
    ## Installation
 
-   test
+   node.js, axios, inquirer
 
    ## Usage 
 
-   test
+   makes read me
 
    ## Credits
 
-   test
+   me
 
    ## License
 
-   test
+   MIT
 
    ## Badges
 
-   ![badmath](https://img.shields.io/github/issues/hondahelix/hi)
-   ![badmath](https://img.shields.io/github/forks/hondahelix/hi)
-   ![badmath](https://img.shields.io/github/stars/hondahelix/hi)
-   ![badmath](https://img.shields.io/github/license/hondahelix/hi)
+   ![badmath](https://img.shields.io/github/issues/hondahelix/good-readme-generator)
+   ![badmath](https://img.shields.io/github/forks/hondahelix/good-readme-generator)
+   ![badmath](https://img.shields.io/github/stars/hondahelix/good-readme-generator)
+   ![badmath](https://img.shields.io/github/license/hondahelix/good-readme-generator)
 
    ## Contributing
 
-   test
+   no
 
    ## Tests
 
-   test
+   no
 
    ## Questions
 
-   test
+   me
 
    null
    ![userAvatar](https://avatars0.githubusercontent.com/u/70417229?v=4)
